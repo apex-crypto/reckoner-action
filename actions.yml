@@ -1,0 +1,16 @@
+# action.yml
+name: 'Reckoner'
+description: 'Run a Reckoner command'
+inputs:
+  reckoner-command:  # id of input
+    description: 'reckoner command'
+    required: true
+    default: 'reckoner --help'
+outputs:
+  time: # id of output
+    description: 'The time '
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.reckoner-command }}
