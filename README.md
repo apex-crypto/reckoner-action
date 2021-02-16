@@ -21,6 +21,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Setup tmate session
+    - name: Reckoner Ling
       uses: apex-crypto/reckoner-action@v1
+      with: 
+        'reckoner lint reckoner/course.yml'
 ```
