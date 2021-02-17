@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Reckoner Ling
+    - name: Reckoner Lint
       uses: apex-crypto/reckoner-action@v1
       with: 
         'reckoner lint reckoner/course.yml'
