@@ -15,7 +15,7 @@ RUN mv ./kubectl /usr/local/bin/kubectl
 
 COPY entrypoint.sh /entrypoint.sh
 # install reckoner
-RUN pip install reckoner
+RUN pip install reckoner==4.3.2
 
 RUN rm -rf /tmp/* && \
 rm -rf /var/cache/apk/*
