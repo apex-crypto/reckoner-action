@@ -5,8 +5,8 @@ RUN apk update && \
 apk add aws-cli jq make unzip wget git python3 py3-pip curl bash openssl
 
 # install helm
-RUN curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 && \
-chmod +x get_helm.sh && ./get_helm.sh
+RUN wget https://get.helm.sh/helm-v3.5.2-linux-amd64.tar.gz && tar xvzf helm-v3.5.2-linux-amd64.tar.gz
+RUN mv /linux-amd64/helm /usr/local/bin/  
 
 # install kubectl
 RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
