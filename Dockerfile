@@ -2,7 +2,7 @@ FROM alpine:3
 LABEL org.opencontainers.image.authors="devops@peak6.com"
 
 RUN apk update && \
-apk add aws-cli jq make unzip wget git python3 py3-pip curl bash openssl
+apk add aws-cli bash curl git jq make openssl py3-pip python3 unzip wget
 
 # install helm
 RUN wget https://get.helm.sh/helm-v3.5.2-linux-amd64.tar.gz && tar xvzf helm-v3.5.2-linux-amd64.tar.gz
