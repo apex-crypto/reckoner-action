@@ -13,6 +13,6 @@ outputs:
 
 runs:
   using: docker
-  image: "public.ecr.aws/i9h4d0i0/apex-crypto/reckoner-action:redesign"
+  image: "docker://public.ecr.aws/i9h4d0i0/apex-crypto/reckoner-action:redesign"
   args:
     - ${{ inputs.reckoner-command }}
