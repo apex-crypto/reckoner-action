@@ -1,16 +1,18 @@
-# action.yml
-name: 'Reckoner'
-description: 'Run a Reckoner command'
+name: Reckoner
+description: "Run a reckoner command"
+
 inputs:
-  reckoner-command:  # id of input
-    description: 'reckoner command'
+  reckoner-command:
+    description: "reckoner command"
     required: true
-    default: 'reckoner --help'
+    default: "reckoner --help"
+
 outputs:
-  time: # id of output
-    description: 'The time '
+  time:
+    description: "The time "
+
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: "public.ecr.aws/i9h4d0i0/apex-crypto/reckoner-action:redesign"
   args:
     - ${{ inputs.reckoner-command }}
